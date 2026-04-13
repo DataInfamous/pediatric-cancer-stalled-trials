@@ -26,9 +26,12 @@ A geospatial and epidemiological analysis of 950 stalled pediatric cancer trials
 ## Project Structure
 ├── data/
 │   ├── stalled_trials_final.csv
+
 │   └── trials_by_country.csv
+
 ├── notebooks/
 │   └── data_extraction.ipynb
+
 └── README.md
 
 
