@@ -3,7 +3,7 @@
 An analysis of 950 stalled pediatric cancer trials registered globally on ClinicalTrials.gov — exploring where research stops, why it stops, and who is responsible.
 
 ## Live Dashboard
-[View on Power BI](paste your link here)
+[View on Power BI](https://app.powerbi.com/groups/me/reports/2cd4bd95-17e8-40d2-b5ed-1c63881d3681/f47d90003a9e67905063?experience=power-bi)
 
 ## Key Findings
 - 950 stalled trials spanning 1995–2026 across 89 countries
