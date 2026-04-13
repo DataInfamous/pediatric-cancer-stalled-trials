@@ -26,10 +26,16 @@ An analysis of 950 stalled pediatric cancer trials registered globally on Clinic
 ## Project Structure
 
 ├── data/
+
+
 │ ├── stalled_trials_final.csv
 │ └── trials_by_country.csv
+
+
 ├── notebooks/
 │ └── data_extraction.ipynb
+
+
 └── README.md
 
 
