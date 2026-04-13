@@ -14,9 +14,11 @@ A geospatial and epidemiological analysis of 950 stalled pediatric cancer trials
 - **United States dominates** with 394 trial locations, more than 4x the next country (France, 92)
 
 ## Data Source
-- [ClinicalTrials.gov API v2](https://clinicaltrials.gov/data-api/api)
-  - Filtered for pediatric cancer
-  - Statuses: TERMINATED, WITHDRAWN, UNKNOWN, SUSPENDED, NO_LONGER_AVAILABLE
+[ClinicalTrials.gov API v2](https://clinicaltrials.gov/data-api/api)
+
+**Filters applied:**
+- Condition: Pediatric Cancer
+- Statuses: TERMINATED, WITHDRAWN, UNKNOWN, SUSPENDED, NO_LONGER_AVAILABLE
 
 ## Tools
 - Python (data extraction, cleaning, feature engineering)
