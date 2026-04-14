@@ -1,7 +1,7 @@
 # Where Pediatric Cancer Trials Stall
 ### A Global Registry Analysis of Trial Termination, Suspension, and Missing Stop Reasons, 1995–Present
 
-A geospatial and epidemiological analysis of 950 stalled pediatric cancer trials across 89 countries — examining where research stops, why it stops, and what the patterns reveal about global research infrastructure.
+A geospatial and epidemiological analysis of 954 stalled pediatric cancer trials across 89 countries — examining where research stops, why it stops, and what the patterns reveal about global research infrastructure.
 
 ## Live Dashboard
 [View on Power BI](https://app.powerbi.com/groups/me/reports/2cd4bd95-17e8-40d2-b5ed-1c63881d3681/f47d90003a9e67905063?experience=power-bi)
@@ -9,12 +9,29 @@ A geospatial and epidemiological analysis of 950 stalled pediatric cancer trials
 ---
 
 ## Key Findings
-- **950 stalled trials** across 89 countries spanning 1995–present
+- **954 stalled trials** across 89 countries spanning 1995–present
 - **54% have no recorded stop reason** — reflecting registry incompleteness, not a clinical finding
 - **Low enrollment/accrual** is the #1 documented cause among trials with recorded reasons (190 trials)
 - Stalled trials **peaked in 2021** — consistent with COVID-era disruption, though this reflects association, not causation
 - **United States accounts for 394 trial locations** — more than 4x France (92), consistent with high-income country concentration in pediatric oncology research
 - **St. Jude Children's Research Hospital** appears among top sponsors by volume — a reflection of large research footprint, not comparative performance
+- **Post-2025 trials are significantly more likely to stall for funding-related reasons** (logistic regression, p=0.002), consistent with DOGE-era NIH/HHS funding disruptions beginning January 2025
+
+---
+
+## Regression Analysis
+Logistic regression (n=954) predicting funding-related trial termination:
+
+| Predictor | Coefficient | p-value | Interpretation |
+|-----------|-------------|---------|----------------|
+| Post2025 | 3.202 | 0.002 | Trials starting 2025+ significantly more likely to stall for funding reasons |
+| NumCountries | 0.059 | 0.028 | Multi-country trials show slightly higher funding-related stall risk |
+| SponsorType_Pharma | 1.055 | 0.005 | Pharma-sponsored trials more likely to cite funding/business reasons |
+| SponsorType_Other | -0.009 | 0.980 | Not significant |
+
+**Model**: Logistic regression, MLE, converged. Pseudo R² = 0.048. LLR p-value = 0.0008.
+
+**Note**: Post2025 association is consistent with DOGE-era NIH/HHS funding disruptions beginning January 2025. Causation cannot be established from registry data alone.
 
 ---
 
@@ -41,7 +58,7 @@ A geospatial and epidemiological analysis of 950 stalled pediatric cancer trials
 ---
 
 ## Tools
-- Python (data extraction, cleaning, feature engineering)
+- Python (data extraction, cleaning, feature engineering, logistic regression)
 - Microsoft Excel (data cleaning)
 - Power BI (dashboard and geospatial visualization)
 
@@ -51,31 +68,27 @@ A geospatial and epidemiological analysis of 950 stalled pediatric cancer trials
 - Registry data is self-reported and inconsistently maintained — stop reasons are missing for 54% of trials
 - Status categories are not clinically interchangeable and reflect different operational realities
 - Country counts reflect trial site locations, not sponsoring country
-- Analysis is descriptive; temporal patterns (e.g. COVID peak) reflect association, not causation
+- Analysis is descriptive and associative; temporal patterns cannot establish causation
 - ClinicalTrials.gov skews toward US and high-income country trials — global coverage is incomplete without WHO ICTRP
+- Post-2025 sample is small — regression findings should be interpreted cautiously pending additional data
 
 ---
 
 ## Project Structure
-
-
 ```
 ├── data/
 │   ├── stalled_trials_final.csv
 │   └── trials_by_country.csv
 ├── notebooks/
-│   └── data_extraction.ipynb
+│   └── pediatric_cancer_trial_analysis.ipynb
 └── README.md
 ```
-
-
-
 
 ---
 
 ## Future Research Directions
+- Cross-reference with CAP/DOGE grant termination dataset to identify specific institutions affected
 - Normalize by total pediatric cancer trials per country to calculate stalled trial rates
-- Add sponsor-level rates (stalled trials per registered trial) for more defensible comparisons
-- Correlate stalled trial patterns with pharmaceutical lobbying expenditure by country
-- Connect funding disruption events (NIH restructuring, HHS changes) to termination spikes
+- Add sponsor-level rates (stalled trials per registered trial) for defensible comparisons
 - Expand to WHO ICTRP for broader global coverage
+- Re-pull API in Q3 2026 to assess whether Post2025 signal strengthens with more data
