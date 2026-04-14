@@ -87,8 +87,10 @@ Logistic regression (n=954) predicting funding-related trial termination:
 ---
 
 ## Future Research Directions
-- Cross-reference with CAP/DOGE grant termination dataset to identify specific institutions affected
+- Cross-reference with [Grant Watch Database](https://www.statnews.com/2025/05/27/nih-cuts-tracked-in-grant-watch-database-q-and-a-with-harvard-researcher-scott-delaney/) 
+  (Harvard, 2025) — 383 trials disrupted, 74K participants affected
+- Download AACT full ClinicalTrials.gov dataset for expanded regression with post-2025 cohort
+- Merge with HHS TAGGS grant termination data to identify specific institutions affected
 - Normalize by total pediatric cancer trials per country to calculate stalled trial rates
-- Add sponsor-level rates (stalled trials per registered trial) for defensible comparisons
 - Expand to WHO ICTRP for broader global coverage
-- Re-pull API in Q3 2026 to assess whether Post2025 signal strengthens with more data
+- Re-pull API in Q3 2026 to assess whether Post2025 signal strengthens
