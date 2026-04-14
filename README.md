@@ -7,15 +7,15 @@ A geospatial and epidemiological analysis of 954 stalled pediatric cancer trials
 [View on Power BI](https://app.powerbi.com/groups/me/reports/2cd4bd95-17e8-40d2-b5ed-1c63881d3681/f47d90003a9e67905063?experience=power-bi)
 
 ---
-
 ## Key Findings
 - **954 stalled trials** across 89 countries spanning 1995–present
 - **54% have no recorded stop reason** — reflecting registry incompleteness, not a clinical finding
 - **Low enrollment/accrual** is the #1 documented cause among trials with recorded reasons (190 trials)
 - Stalled trials **peaked in 2021** — consistent with COVID-era disruption, though this reflects association, not causation
 - **United States accounts for 394 trial locations** — more than 4x France (92), consistent with high-income country concentration in pediatric oncology research
-- **St. Jude Children's Research Hospital** appears among top sponsors by volume — a reflection of large research footprint, not comparative performance
+- **St. Jude Children's Research Hospital stall rate: 7.2%** (10/138 trials) vs overall dataset rate of 41.8% — consistent with philanthropic funding model providing institutional resilience during public funding disruptions
 - **Post-2025 trials are significantly more likely to stall for funding-related reasons** (logistic regression, p=0.002), consistent with DOGE-era NIH/HHS funding disruptions beginning January 2025
+
 
 ---
 
