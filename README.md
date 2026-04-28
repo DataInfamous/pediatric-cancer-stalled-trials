@@ -155,10 +155,12 @@ See: `ANALYSIS_VALIDATION.md`
 
 ## Related Work
 
-This dataset feeds into:
+This project feeds into:
 
-**pediatric-cancer-research-gaps**
-Testing whether stalled trial distribution aligns with survivor burden using CCSS mortality data and CDC WONDER incidence rates.
+**Pediatric Cancer Research Gap Analysis**  
+https://github.com/DataInfamous/pediatric-cancer-research-gaps
+
+That follow-up analysis combines this stalled-trials dataset with CDC WONDER incidence rates and CCSS late-effects mortality data to test whether pediatric cancer research activity aligns with survivor harm.
 
 ---
 
