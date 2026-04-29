@@ -115,10 +115,21 @@ See: `ANALYSIS_VALIDATION.md`
 
 ## Limitations
 
-- Age filtering is based on eligibility categories, not numeric age limits — the dataset reflects pediatric-eligible trials, not pediatric-only trials
+- Age filtering is based on eligibility categories, not numeric age limits — 
+  the dataset reflects pediatric-eligible trials, not pediatric-only trials
 - Registry data is self-reported and inconsistently maintained
 - 54% of trials lack a recorded stop reason
-- Funding-related classification is based on keyword extraction from reported reasons
+- Approximately 75% of trials do not map cleanly to predefined pediatric 
+  oncology subtypes using keyword-based classification and are categorized 
+  as "other." These trials are retained for system-level analyses but 
+  excluded from disease-level correlation analysis to avoid misclassification 
+  bias. Disease-level conclusions are based on a subset of trials with 
+  high-confidence classification rather than the full dataset.
+- The proportion of uncategorized trials (~75%) reflects the heterogeneity 
+  of trial descriptions in registry data and highlights the limitations of 
+  free-text condition labeling — not missing data
+- Funding-related classification is based on keyword extraction from 
+  reported reasons
 - ClinicalTrials.gov overrepresents high-income countries
 - Post-2025 sample size is limited
 - Observational data cannot establish causation
